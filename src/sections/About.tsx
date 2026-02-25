@@ -46,8 +46,8 @@ export const About = () => {
 
             <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center mb-4">
               {/* Profile Image */}
-              <div className="w-40 h-40 sm:w-48 sm:h-48 shrink-0 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl relative group">
-                <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
+              <div className="w-56 h-56 sm:w-48 sm:h-48 mx-auto sm:mx-0 shrink-0 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl relative group">
+                <div className="absolute inset-0 bg-transparent sm:bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
                 {/* 
                   O link da imagem abaixo é um placeholder estilizado. 
                   Recomendo substituir pela sua própria foto (ex: em public/avatar.jpg mantendo o /avatar.jpg) 
@@ -55,7 +55,7 @@ export const About = () => {
                 <img 
                   src="https://avatars.githubusercontent.com/u/251650728?v=4"
                   alt="Wellyson - Desenvolvedor Backend" 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" 
+                  className="w-full h-full object-cover grayscale-0 sm:grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" 
                 />
               </div>
 
