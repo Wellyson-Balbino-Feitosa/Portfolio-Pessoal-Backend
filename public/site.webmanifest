@@ -1,0 +1,21 @@
+{
+  "name": "Wellyson Balbino Feitosa Portfolio",
+  "short_name": "Wellyson Portfolio",
+  "icons": [
+    {
+      "src": "/icons8-código-fonte-48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons8-código-fonte-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#0a192f",
+  "background_color": "#0a192f",
+  "display": "standalone",
+  "start_url": "/"
+}
