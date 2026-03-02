@@ -1,11 +1,26 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Terminal } from 'lucide-react';
+import FaultyTerminal from '../components/FaultyTerminal';
 
 export const Hero = () => {
   return (
     <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] opacity-50 pointer-events-none" />
+      {/* Dynamic Terminal Background Layer */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <FaultyTerminal 
+          scale={1.3}
+          tint="#38bdf8"
+          brightness={0.8}
+          scanlineIntensity={0.2}
+          mouseReact={true} 
+          glitchAmount={1.1}
+          flickerAmount={1.1}
+          className="opacity-20 grayscale-[0.5]"
+        />
+      </div>
+
+      {/* Decorative Blur Background Layer */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[800px] max-h-[800px] bg-primary/20 rounded-full blur-[120px] opacity-40 pointer-events-none z-[1]" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center">
