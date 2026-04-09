@@ -1,30 +1,39 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Terminal } from 'lucide-react';
-import FaultyTerminal from '../components/FaultyTerminal';
+import Aurora from '../components/Aurora';
 
 export const Hero = () => {
   return (
     <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      {/* Dynamic Terminal Background Layer */}
+
+      {/* ── Aurora Background Layer ─────────────────────────────────────────── */}
+      {/* Degradê: sky-400 → sky-600 → sky-400 para uma aurora fluida e coesa  */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <FaultyTerminal 
-          scale={1.3}
-          tint="#38bdf8"
-          brightness={0.8}
-          scanlineIntensity={0.2}
-          mouseReact={true} 
-          glitchAmount={1.1}
-          flickerAmount={1.1}
-          className="opacity-20 grayscale-[0.5]"
+        <Aurora
+          colorStops={['#38bdf8', '#0284c7', '#38bdf8']}
+          amplitude={1.2}
+          blend={0.6}
+          speed={0.6}
+          className="opacity-60"
         />
       </div>
 
-      {/* Decorative Blur Background Layer */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[800px] max-h-[800px] bg-primary/20 rounded-full blur-[120px] opacity-40 pointer-events-none z-[1]" />
-      
+      {/* ── Vinheta radial para profundidade ──────────────────────────────── */}
+      <div
+        className="absolute inset-0 z-[1] pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 80% 60% at 50% 40%, transparent 30%, rgba(2,6,23,0.85) 100%)',
+        }}
+      />
+
+      {/* ── Halo de brilho central ────────────────────────────────────────── */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[700px] max-h-[700px] bg-sky-500/10 rounded-full blur-[100px] opacity-50 pointer-events-none z-[2]" />
+
+      {/* ── Conteúdo ──────────────────────────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center">
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -14,7 +14,7 @@ export const Contact = () => {
       return;
     }
 
-    const recipient = 'lowlyensnibalbo@gmail.com';
+    const recipient = 'wellysonjose115@gmail.com';
     const subject = encodeURIComponent(`Contato via Portfólio - ${formData.name}`);
     const body = encodeURIComponent(`Nome: ${formData.name}\nE-mail: ${formData.email}\n\nMensagem:\n${formData.message}`);
     
@@ -81,13 +81,13 @@ export const Contact = () => {
               </div>
 
               <div className="space-y-4">
-                <a href="mailto:lowlyensnibalbo@gmail.com" className="flex items-center gap-4 text-text-muted hover:text-primary transition-colors group">
+                <a href="mailto:wellysonjose115@gmail.com" className="flex items-center gap-4 text-text-muted hover:text-primary transition-colors group">
                   <div className="p-3 glass rounded-xl group-hover:bg-primary/10 transition-colors">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <p className="text-sm font-medium text-white">E-mail</p>
-                    <p className="text-sm break-all">lowlyensnibalbo@gmail.com</p>
+                    <p className="text-sm break-all">wellysonjose115@gmail.com</p>
                   </div>
                 </a>
 
